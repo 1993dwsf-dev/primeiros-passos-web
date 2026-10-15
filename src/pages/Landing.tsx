@@ -112,30 +112,30 @@ export default function Landing() {
             <motion.div
               {...fadeUp}
               transition={{ ...fadeUp.transition, delay: 0.1 }}
-              className="grid gap-4"
+              className="grid gap-4 md:grid-cols-3 lg:col-span-2"
             >
-              <div className="text-primary-foreground flex items-start gap-4 rounded-2xl bg-[var(--flat-pink)] p-6">
-                <Baby className="mt-0.5 h-8 w-8 shrink-0" />
+              <div className="text-primary-foreground flex items-start gap-4 rounded-2xl bg-[var(--flat-pink)] p-5">
+                <Baby className="mt-0.5 h-7 w-7 shrink-0" />
                 <div>
-                  <p className="text-xl font-bold">06 meses a 03 anos</p>
+                  <p className="text-lg font-bold">06 meses a 03 anos</p>
                   <p className="mt-0.5 text-white/85 text-[15px]">
                     Turmas por faixa etária, do berçário ao maternal.
                   </p>
                 </div>
               </div>
-              <div className="bg-[var(--flat-blue)] flex items-start gap-4 rounded-2xl p-6 text-white">
-                <UtensilsCrossed className="mt-0.5 h-8 w-8 shrink-0" />
+              <div className="flex items-start gap-4 rounded-2xl bg-[var(--flat-blue)] p-5 text-white">
+                <UtensilsCrossed className="mt-0.5 h-7 w-7 shrink-0" />
                 <div>
-                  <p className="text-xl font-bold">Alimentação saudável</p>
+                  <p className="text-lg font-bold">Alimentação saudável</p>
                   <p className="mt-0.5 text-white/85 text-[15px]">
                     Rotina alimentar cuidada todos os dias.
                   </p>
                 </div>
               </div>
-              <div className="bg-[var(--flat-yellow)] flex items-start gap-4 rounded-2xl p-6 text-[color:var(--accent-foreground)]">
-                <ShieldCheck className="mt-0.5 h-8 w-8 shrink-0" />
+              <div className="flex items-start gap-4 rounded-2xl bg-[var(--flat-yellow)] p-5 text-[color:var(--accent-foreground)]">
+                <ShieldCheck className="mt-0.5 h-7 w-7 shrink-0" />
                 <div>
-                  <p className="text-xl font-bold">Espaço seguro</p>
+                  <p className="text-lg font-bold">Espaço seguro</p>
                   <p className="mt-0.5 text-[15px] opacity-80">
                     Ambiente acolhedor e atividades para cada fase.
                   </p>
