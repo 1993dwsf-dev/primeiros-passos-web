@@ -3,8 +3,6 @@
 @import "tw-animate-css";
 @custom-variant dark (&:is(.dark *));
 
-@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Kalam:wght@400;700&display=swap");
-
 /* DO NOT CHANGE */
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
@@ -44,53 +42,47 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
-/* CHANGE VALUES FOR THEME — Notebook: cream paper, blue ink, coral accents */
+/* CHANGE VALUES FOR THEME — Flat color, clean & minimal */
 :root {
-  --radius: 0.625rem;
-  --background: oklch(0.93 0.03 84);
-  --foreground: oklch(0.34 0.06 255);
-  --card: oklch(0.983 0.012 95);
-  --card-foreground: oklch(0.34 0.06 255);
-  --popover: oklch(0.983 0.012 95);
-  --popover-foreground: oklch(0.34 0.06 255);
-  --primary: oklch(0.66 0.17 28);
-  --primary-foreground: oklch(0.99 0.01 95);
-  --secondary: oklch(0.87 0.055 238);
-  --secondary-foreground: oklch(0.3 0.06 255);
-  --muted: oklch(0.95 0.018 95);
-  --muted-foreground: oklch(0.52 0.05 255);
-  --accent: oklch(0.9 0.13 95);
-  --accent-foreground: oklch(0.34 0.06 255);
+  --radius: 0.875rem;
+  --background: oklch(0.995 0.004 95);
+  --foreground: oklch(0.23 0.02 260);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.23 0.02 260);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.23 0.02 260);
+  --primary: oklch(0.7 0.19 30);
+  --primary-foreground: oklch(0.995 0.004 95);
+  --secondary: oklch(0.92 0.05 232);
+  --secondary-foreground: oklch(0.28 0.06 255);
+  --muted: oklch(0.962 0.008 95);
+  --muted-foreground: oklch(0.52 0.03 260);
+  --accent: oklch(0.94 0.145 95);
+  --accent-foreground: oklch(0.3 0.04 95);
   --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.86 0.03 90);
-  --input: oklch(0.86 0.03 90);
-  --ring: oklch(0.66 0.17 28);
-  --chart-1: oklch(0.66 0.17 28);
-  --chart-2: oklch(0.62 0.13 238);
-  --chart-3: oklch(0.72 0.14 150);
-  --chart-4: oklch(0.9 0.13 95);
+  --border: oklch(0.925 0.01 95);
+  --input: oklch(0.925 0.01 95);
+  --ring: oklch(0.7 0.19 30);
+  --chart-1: oklch(0.7 0.19 30);
+  --chart-2: oklch(0.6 0.13 232);
+  --chart-3: oklch(0.68 0.16 156);
+  --chart-4: oklch(0.94 0.145 95);
   --chart-5: oklch(0.6 0.15 340);
-  --sidebar: oklch(0.983 0.012 95);
-  --sidebar-foreground: oklch(0.34 0.06 255);
-  --sidebar-primary: oklch(0.66 0.17 28);
-  --sidebar-primary-foreground: oklch(0.99 0.01 95);
-  --sidebar-accent: oklch(0.95 0.018 95);
-  --sidebar-accent-foreground: oklch(0.34 0.06 255);
-  --sidebar-border: oklch(0.86 0.03 90);
-  --sidebar-ring: oklch(0.66 0.17 28);
+  --sidebar: oklch(0.995 0.004 95);
+  --sidebar-foreground: oklch(0.23 0.02 260);
+  --sidebar-primary: oklch(0.7 0.19 30);
+  --sidebar-primary-foreground: oklch(0.995 0.004 95);
+  --sidebar-accent: oklch(0.962 0.008 95);
+  --sidebar-accent-foreground: oklch(0.23 0.02 260);
+  --sidebar-border: oklch(0.925 0.01 95);
+  --sidebar-ring: oklch(0.7 0.19 30);
 
-  /* Notebook custom tokens */
-  --page: oklch(0.985 0.012 95);
-  --rule: oklch(0.72 0.065 248 / 35%);
-  --rule-strong: oklch(0.6 0.08 248 / 50%);
-  --margin-line: oklch(0.68 0.19 25 / 45%);
-  --tape: oklch(0.92 0.09 95 / 75%);
-  --note-yellow: oklch(0.94 0.115 98);
-  --note-blue: oklch(0.93 0.05 228);
-  --note-pink: oklch(0.93 0.055 14);
-  --note-green: oklch(0.93 0.06 155);
-  --wa: oklch(0.68 0.15 156);
-  --wa-hover: oklch(0.62 0.15 156);
+  /* Flat theme tokens */
+  --flat-coral: oklch(0.7 0.19 30);
+  --flat-blue: oklch(0.62 0.13 232);
+  --flat-yellow: oklch(0.94 0.145 95);
+  --flat-green: oklch(0.72 0.17 152);
+  --flat-green-hover: oklch(0.66 0.17 152);
 }
 
 .dark {
@@ -127,11 +119,6 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
-@theme inline {
-  --font-hand: "Caveat", ui-rounded, cursive;
-  --font-note: "Kalam", "Caveat", cursive;
-}
-
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -145,114 +132,5 @@
   }
   html {
     scroll-behavior: smooth;
-  }
-}
-
-/* ===== Notebook theme utilities ===== */
-
-/* Ruled notebook page: faint blue lines + red margin on the left */
-.notebook-page {
-  background-color: var(--page);
-  background-image:
-    repeating-linear-gradient(
-      to bottom,
-      transparent 0,
-      transparent 2.25rem,
-      var(--rule) 2.25rem,
-      var(--rule) calc(2.25rem + 1px)
-    ),
-    linear-gradient(
-      to right,
-      transparent 0,
-      transparent 3.25rem,
-      var(--margin-line) 3.25rem,
-      var(--margin-line) calc(3.25rem + 1.5px),
-      transparent calc(3.25rem + 2px)
-    );
-  line-height: 2.25rem;
-}
-
-/* Same page but denser lines for list blocks */
-.notebook-lines {
-  background-image: repeating-linear-gradient(
-    to bottom,
-    transparent 0,
-    transparent 2rem,
-    var(--rule-strong) 2rem,
-    var(--rule-strong) calc(2rem + 1px)
-  );
-}
-
-/* Subtle paper grain via SVG turbulence noise */
-.paper-grain {
-  position: relative;
-  isolation: isolate;
-}
-.paper-grain::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  pointer-events: none;
-  opacity: 0.5;
-  mix-blend-mode: multiply;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='linear' slope='0.06'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
-}
-
-/* Washi tape strip */
-.tape {
-  background: linear-gradient(
-    100deg,
-    var(--tape) 0%,
-    var(--tape) 45%,
-    oklch(0.96 0.05 95 / 80%) 50%,
-    var(--tape) 55%,
-    var(--tape) 100%
-  );
-  box-shadow: 0 1px 2px oklch(0.3 0.05 255 / 15%);
-}
-
-/* Highlighter swipe behind a word */
-.highlight {
-  background-image: linear-gradient(
-    to top,
-    oklch(0.93 0.15 100 / 70%) 0%,
-    oklch(0.93 0.15 100 / 70%) 38%,
-    transparent 38%
-  );
-}
-
-/* Hand-drawn dashed underline */
-.squiggle {
-  text-decoration: underline;
-  text-decoration-style: wavy;
-  text-decoration-color: var(--primary);
-  text-decoration-thickness: 2px;
-  text-underline-offset: 5px;
-}
-
-/* Sticky note shadow */
-.sticky-note {
-  box-shadow:
-    0 10px 22px -10px oklch(0.3 0.05 255 / 35%),
-    0 2px 4px oklch(0.3 0.05 255 / 12%);
-}
-
-/* Red margin line reserved space for full-width page sections */
-.margin-pad {
-  padding-left: 3.25rem;
-}
-@media (max-width: 640px) {
-  .notebook-page {
-    background-image: repeating-linear-gradient(
-      to bottom,
-      transparent 0,
-      transparent 2.25rem,
-      var(--rule) 2.25rem,
-      var(--rule) calc(2.25rem + 1px)
-    );
-  }
-  .margin-pad {
-    padding-left: 1rem;
   }
 }
