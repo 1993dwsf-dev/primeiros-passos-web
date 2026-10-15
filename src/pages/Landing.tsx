@@ -75,7 +75,7 @@ export default function Landing() {
             <img
               src="/logo-educandario.jpg"
               alt="Educandário Primeiros Passos"
-              className="mx-auto mb-5 h-28 w-28 rounded-full sm:h-36 sm:w-36"
+              className="mx-auto mb-5 h-48 w-48 rounded-full sm:h-64 sm:w-64 lg:h-80 lg:w-80"
             />
             <div>
               <motion.p
