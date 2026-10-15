@@ -19,6 +19,12 @@ const WHATSAPP_MSG = encodeURIComponent(
 );
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MSG}`;
 const INSTAGRAM_URL = "https://www.instagram.com/primeirospassosvha/";
+const ADDRESS =
+  "R. Elvira Crepaldi Mendes, 4953 - Jardim Eldorado, Vilhena - RO, 76987-122";
+const MAPS_QUERY = encodeURIComponent(ADDRESS);
+/** Embed sem chave de API — o Google redireciona para /maps/embed. */
+const MAPS_EMBED_URL = `https://www.google.com/maps?q=${MAPS_QUERY}&z=16&hl=pt-BR&output=embed`;
+const MAPS_LINK = `https://www.google.com/maps/search/?api=1&query=${MAPS_QUERY}`;
 
 const fadeUp = {
   initial: { opacity: 0, y: 20 },
@@ -211,64 +217,13 @@ export default function Landing() {
           </div>
         </section>
 
-        {/* ===== Informação essencial (quadros flat) ===== */}
-        <section className="mx-auto max-w-6xl px-5 py-20">
-          <motion.h2
-            {...fadeUp}
-            className="text-3xl font-bold tracking-tight sm:text-4xl"
-          >
-            Bom saber
-          </motion.h2>
-          <div className="mt-10 grid gap-4 sm:grid-cols-3">
-            {[
-              {
-                icon: <Baby className="mt-0.5 h-8 w-8 shrink-0" />,
-                q: "Quem atende?",
-                a: "Crianças de 6 meses a 3 anos, em turmas organizadas por faixa etária.",
-                cls: "bg-[var(--flat-pink)] text-[color:var(--flat-ink)]",
-                sub: "text-[color:var(--flat-ink)]/75",
-              },
-              {
-                icon: <MapPin className="mt-0.5 h-8 w-8 shrink-0" />,
-                q: "Onde estamos?",
-                a: "R. Elvira Crepaldi Mendes, 4953 - Jardim Eldorado, Vilhena - RO, 76987-122.",
-                cls: "bg-[var(--flat-blue-light)] text-[color:var(--flat-ink)]",
-                sub: "text-[color:var(--flat-ink)]/75",
-              },
-              {
-                icon: (
-                  <MessageCircle className="mt-0.5 h-8 w-8 shrink-0 text-[var(--flat-red)]" />
-                ),
-                q: "Quero realizar a matrícula",
-                a: "Fale com a gente no WhatsApp para dúvidas, visita e matrícula.",
-                cls: "border-2 border-[var(--flat-red-light)] bg-white text-[color:var(--flat-ink)]",
-                sub: "text-muted-foreground",
-              },
-            ].map((item) => (
-              <motion.div
-                {...fadeUp}
-                key={item.q}
-                className={`flex items-start gap-4 rounded-2xl p-6 ${item.cls}`}
-              >
-                {item.icon}
-                <div>
-                  <p className="text-lg font-bold">{item.q}</p>
-                  <p className={`mt-1.5 text-[15px] leading-relaxed ${item.sub}`}>
-                    {item.a}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </section>
-
-        {/* ===== CTA (flat yellow band) ===== */}
+        {/* ===== CTA + mapa (flat yellow band) ===== */}
         <section id="contato" className="mx-auto max-w-6xl px-5 pb-20">
           <motion.div
             {...fadeUp}
-            className="bg-[var(--flat-yellow-light)] rounded-3xl px-6 py-12 sm:px-12"
+            className="bg-[var(--flat-yellow-light)] rounded-3xl px-6 py-14 sm:px-14 sm:py-16 lg:py-20"
           >
-            <div className="grid items-center gap-8 sm:grid-cols-[1fr_auto]">
+            <div className="grid items-center gap-10 lg:grid-cols-[1fr_1.05fr]">
               <div>
                 <h2 className="text-accent-foreground text-3xl font-bold tracking-tight sm:text-4xl">
                   Vamos conversar?
@@ -289,14 +244,41 @@ export default function Landing() {
                     @primeirospassosvha
                   </a>
                 </div>
+                <div className="border-[color:var(--flat-ink)]/15 mt-9 border-t pt-7">
+                  <p className="text-accent-foreground/60 text-xs font-semibold tracking-wide uppercase">
+                    WhatsApp
+                  </p>
+                  <p className="text-accent-foreground mt-1 text-2xl font-bold">
+                    {WHATSAPP_DISPLAY}
+                  </p>
+                  <p className="text-accent-foreground/75 mt-5 flex items-start gap-2 text-[15px] leading-relaxed">
+                    <MapPin className="mt-0.5 h-4 w-4 shrink-0" />
+                    {ADDRESS}
+                  </p>
+                </div>
               </div>
-              <div className="mx-auto text-center">
-                <p className="text-accent-foreground/60 text-xs font-semibold tracking-wide uppercase">
-                  WhatsApp
-                </p>
-                <p className="text-accent-foreground mt-1 text-2xl font-bold">
-                  {WHATSAPP_DISPLAY}
-                </p>
+              <div className="overflow-hidden rounded-2xl border border-[color:var(--flat-ink)]/10 bg-white shadow-sm">
+                <iframe
+                  title={`Mapa — ${ADDRESS}`}
+                  src={MAPS_EMBED_URL}
+                  className="h-72 w-full sm:h-80 lg:h-96"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  allowFullScreen
+                />
+                <div className="flex flex-wrap items-center justify-between gap-2 px-4 py-3">
+                  <p className="text-muted-foreground text-xs">
+                    Jardim Eldorado • Vilhena–RO
+                  </p>
+                  <a
+                    href={MAPS_LINK}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[var(--flat-blue)] text-xs font-semibold underline underline-offset-4"
+                  >
+                    Abrir no Google Maps
+                  </a>
+                </div>
               </div>
             </div>
           </motion.div>
