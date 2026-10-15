@@ -45,48 +45,57 @@
 /* CHANGE VALUES FOR THEME — Flat color, clean & minimal */
 :root {
   --radius: 0.875rem;
-  --background: oklch(0.995 0.004 95);
-  --foreground: oklch(0.23 0.02 260);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.23 0.02 260);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.23 0.02 260);
-  --primary: oklch(0.59 0.21 29);
-  --primary-foreground: oklch(0.995 0.004 95);
-  --secondary: oklch(0.93 0.05 236);
-  --secondary-foreground: oklch(0.4 0.11 249);
-  --muted: oklch(0.962 0.008 95);
-  --muted-foreground: oklch(0.52 0.03 260);
-  --accent: oklch(0.94 0.13 90);
-  --accent-foreground: oklch(0.33 0.06 85);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.925 0.01 95);
-  --input: oklch(0.925 0.01 95);
-  --ring: oklch(0.59 0.21 29);
-  --chart-1: oklch(0.59 0.21 29);
-  --chart-2: oklch(0.53 0.13 249);
-  --chart-3: oklch(0.64 0.17 148);
-  --chart-4: oklch(0.84 0.18 90);
-  --chart-5: oklch(0.66 0.13 236);
-  --sidebar: oklch(0.995 0.004 95);
-  --sidebar-foreground: oklch(0.23 0.02 260);
-  --sidebar-primary: oklch(0.59 0.21 29);
-  --sidebar-primary-foreground: oklch(0.995 0.004 95);
-  --sidebar-accent: oklch(0.962 0.008 95);
-  --sidebar-accent-foreground: oklch(0.23 0.02 260);
-  --sidebar-border: oklch(0.925 0.01 95);
-  --sidebar-ring: oklch(0.59 0.21 29);
+  --background: var(--flat-white);
+  --foreground: var(--flat-ink);
+  --card: var(--flat-white);
+  --card-foreground: var(--flat-ink);
+  --popover: var(--flat-white);
+  --popover-foreground: var(--flat-ink);
+  --primary: var(--flat-blue);
+  --primary-foreground: var(--flat-white);
+  --secondary: var(--flat-blue-light);
+  --secondary-foreground: var(--flat-ink);
+  --muted: color-mix(in oklab, var(--flat-gray) 30%, var(--flat-white));
+  --muted-foreground: color-mix(in oklab, var(--flat-ink) 62%, var(--flat-white));
+  --accent: var(--flat-yellow-light);
+  --accent-foreground: var(--flat-ink);
+  --destructive: var(--flat-red);
+  --border: var(--flat-gray);
+  --input: var(--flat-gray);
+  --ring: var(--flat-blue);
+  --chart-1: var(--flat-blue);
+  --chart-2: var(--flat-red);
+  --chart-3: var(--flat-green);
+  --chart-4: var(--flat-yellow);
+  --chart-5: var(--flat-blue-light);
+  --sidebar: var(--flat-white);
+  --sidebar-foreground: var(--flat-ink);
+  --sidebar-primary: var(--flat-blue);
+  --sidebar-primary-foreground: var(--flat-white);
+  --sidebar-accent: color-mix(in oklab, var(--flat-gray) 30%, var(--flat-white));
+  --sidebar-accent-foreground: var(--flat-ink);
+  --sidebar-border: var(--flat-gray);
+  --sidebar-ring: var(--flat-blue);
 
-  /* Paleta lida do logotipo do Educandário Primeiros Passos:
-     vermelho #E02B26 · rosa #D1235C · azul #1A73B8
-     azul-céu #2E9BD8 · verde #2AA84A · amarelo #FBC400 */
-  --flat-red: #e02b26;      /* "primeiros passos" e pinceladas vermelhas */
-  --flat-pink: #d1235c;     /* vestido da menina */
-  --flat-blue: #1a73b8;     /* "EDUCANDÁRIO" */
-  --flat-sky: #2e9bd8;      /* pinceladas azul-claro */
-  --flat-green: #2aa84a;    /* pinceladas verdes */
-  --flat-green-hover: #249341;
-  --flat-yellow: #fbc400;   /* pinceladas amarelas */
+  /* Paleta institucional (fornecida pelo cliente) — base do tema:
+     #0075B9 azul institucional · #DF1225 vermelho vivo · #0D9551 verde
+     #FDC609 amarelo · #FFFFFF branco · #4FA4D0 azul claro · #5BB07E verde claro
+     #FCDC5B amarelo claro · #E24548 vermelho secundário · #F2848B rosa claro
+     #D9D9D9 cinza suave.
+     --flat-ink e o cinza de apoio são derivados dela (a paleta não traz tom de texto). */
+  --flat-blue: #0075b9;          /* azul institucional — cor primária */
+  --flat-blue-light: #4fa4d0;    /* azul claro */
+  --flat-red: #df1225;           /* vermelho vivo */
+  --flat-red-light: #e24548;     /* vermelho secundário (bordas/ícones) */
+  --flat-green: #0d9551;         /* verde */
+  --flat-green-light: #5bb07e;   /* verde claro */
+  --flat-green-hover: color-mix(in oklab, #0d9551 82%, #1e2a33);
+  --flat-yellow: #fdc609;        /* amarelo */
+  --flat-yellow-light: #fcdc5b;  /* amarelo claro */
+  --flat-pink: #f2848b;          /* rosa claro */
+  --flat-gray: #d9d9d9;          /* cinza suave */
+  --flat-white: #ffffff;         /* branco */
+  --flat-ink: #1e2a33;           /* texto sobre cores claras (derivado) */
 }
 
 .dark {

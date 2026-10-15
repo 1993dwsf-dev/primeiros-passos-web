@@ -125,25 +125,25 @@ export default function Landing() {
               transition={{ ...fadeUp.transition, delay: 0.1 }}
               className="grid gap-4 md:grid-cols-3 lg:col-span-2"
             >
-              <div className="text-primary-foreground flex items-start gap-4 rounded-2xl bg-[var(--flat-pink)] p-5">
+              <div className="flex items-start gap-4 rounded-2xl bg-[var(--flat-red)] p-5 text-white">
                 <Baby className="mt-0.5 h-7 w-7 shrink-0" />
                 <div>
                   <p className="text-lg font-bold">06 meses a 03 anos</p>
-                  <p className="mt-0.5 text-white/85 text-[15px]">
+                  <p className="mt-0.5 text-[15px] text-white/90">
                     Turmas por faixa etária, do berçário ao maternal.
                   </p>
                 </div>
               </div>
-              <div className="flex items-start gap-4 rounded-2xl bg-[var(--flat-blue)] p-5 text-white">
+              <div className="flex items-start gap-4 rounded-2xl bg-[var(--flat-green-light)] p-5 text-[color:var(--flat-ink)]">
                 <UtensilsCrossed className="mt-0.5 h-7 w-7 shrink-0" />
                 <div>
                   <p className="text-lg font-bold">Alimentação saudável</p>
-                  <p className="mt-0.5 text-white/85 text-[15px]">
+                  <p className="mt-0.5 text-[15px] text-[color:var(--flat-ink)]/80">
                     Rotina alimentar cuidada todos os dias.
                   </p>
                 </div>
               </div>
-              <div className="flex items-start gap-4 rounded-2xl bg-[var(--flat-yellow)] p-5 text-[color:var(--accent-foreground)]">
+              <div className="flex items-start gap-4 rounded-2xl bg-[var(--flat-yellow)] p-5 text-[color:var(--flat-ink)]">
                 <ShieldCheck className="mt-0.5 h-7 w-7 shrink-0" />
                 <div>
                   <p className="text-lg font-bold">Espaço seguro</p>
@@ -225,22 +225,24 @@ export default function Landing() {
                 icon: <Baby className="mt-0.5 h-8 w-8 shrink-0" />,
                 q: "Quem atende?",
                 a: "Crianças de 6 meses a 3 anos, em turmas organizadas por faixa etária.",
-                cls: "text-primary-foreground bg-[var(--flat-red)]",
-                sub: "text-white/85",
+                cls: "bg-[var(--flat-pink)] text-[color:var(--flat-ink)]",
+                sub: "text-[color:var(--flat-ink)]/75",
               },
               {
                 icon: <MapPin className="mt-0.5 h-8 w-8 shrink-0" />,
                 q: "Onde estamos?",
                 a: "R. Elvira Crepaldi Mendes, 4953 - Jardim Eldorado, Vilhena - RO, 76987-122.",
-                cls: "bg-[var(--flat-sky)] text-white",
-                sub: "text-white/85",
+                cls: "bg-[var(--flat-blue-light)] text-[color:var(--flat-ink)]",
+                sub: "text-[color:var(--flat-ink)]/75",
               },
               {
-                icon: <MessageCircle className="mt-0.5 h-8 w-8 shrink-0" />,
+                icon: (
+                  <MessageCircle className="mt-0.5 h-8 w-8 shrink-0 text-[var(--flat-red)]" />
+                ),
                 q: "Quero realizar a matrícula",
                 a: "Fale com a gente no WhatsApp para dúvidas, visita e matrícula.",
-                cls: "bg-[var(--flat-yellow)] text-[color:var(--accent-foreground)]",
-                sub: "text-[color:var(--accent-foreground)]/75",
+                cls: "border-2 border-[var(--flat-red-light)] bg-white text-[color:var(--flat-ink)]",
+                sub: "text-muted-foreground",
               },
             ].map((item) => (
               <motion.div
@@ -264,7 +266,7 @@ export default function Landing() {
         <section id="contato" className="mx-auto max-w-6xl px-5 pb-20">
           <motion.div
             {...fadeUp}
-            className="bg-[var(--flat-yellow)] rounded-3xl px-6 py-12 sm:px-12"
+            className="bg-[var(--flat-yellow-light)] rounded-3xl px-6 py-12 sm:px-12"
           >
             <div className="grid items-center gap-8 sm:grid-cols-[1fr_auto]">
               <div>
