@@ -89,13 +89,13 @@ export default function Landing() {
                   solto. Sem blend de propósito: o fundo do PNG é branco (~253),
                   então `multiply` não mudaria nada e `lighten` apagaria a arte
                   inteira (max(canal, 255) = 255). */}
-              <div className="rounded-[2rem] border border-[var(--flat-gray)] bg-white p-5 shadow-[0_28px_70px_-45px_rgba(0,53,84,0.6)] sm:p-6 lg:p-7">
+              <div className="rounded-[2rem] border border-[var(--flat-gray)] bg-white p-5 shadow-[0_28px_70px_-45px_rgba(0,53,84,0.6)] sm:p-6 lg:p-8">
                 <img
                   src="/assets/Logo_Infantil_Educand_rio_Primeiros_Passos.png"
                   alt="Educandário Primeiros Passos"
                   width={1254}
                   height={1254}
-                  className="h-40 w-40 sm:h-52 sm:w-52 lg:h-64 lg:w-64"
+                  className="h-56 w-56 sm:h-72 sm:w-72 lg:h-96 lg:w-96"
                 />
               </div>
             </motion.div>
