@@ -207,7 +207,7 @@ export default function Landing() {
           </div>
         </section>
 
-        {/* ===== Informação essencial ===== */}
+        {/* ===== Informação essencial (quadros flat) ===== */}
         <section className="mx-auto max-w-6xl px-5 py-20">
           <motion.h2
             {...fadeUp}
@@ -215,26 +215,42 @@ export default function Landing() {
           >
             Bom saber
           </motion.h2>
-          <div className="mt-10 grid gap-x-10 gap-y-8 sm:grid-cols-3">
+          <div className="mt-10 grid gap-4 sm:grid-cols-3">
             {[
               {
+                icon: <Baby className="mt-0.5 h-8 w-8 shrink-0" />,
                 q: "Quem atende?",
                 a: "Crianças de 6 meses a 3 anos, em turmas organizadas por faixa etária.",
+                cls: "bg-[var(--flat-coral)] text-primary-foreground",
+                sub: "text-white/85",
               },
               {
+                icon: <MapPin className="mt-0.5 h-8 w-8 shrink-0" />,
                 q: "Onde estamos?",
-                a: "Vilhena, Rondônia. Combina a visita e conheça o espaço.",
+                a: "R. Elvira Crepaldi Mendes, 4953 - Jardim Eldorado, Vilhena - RO, 76987-122.",
+                cls: "bg-[var(--flat-blue)] text-white",
+                sub: "text-white/85",
               },
               {
-                q: "Como entrar?",
+                icon: <MessageCircle className="mt-0.5 h-8 w-8 shrink-0" />,
+                q: "Quero realizar a matrícula",
                 a: "Fale com a gente no WhatsApp para dúvidas, visita e matrícula.",
+                cls: "bg-[var(--flat-yellow)] text-[color:var(--accent-foreground)]",
+                sub: "text-[color:var(--accent-foreground)]/75",
               },
             ].map((item) => (
-              <motion.div {...fadeUp} key={item.q}>
-                <p className="text-lg font-bold">{item.q}</p>
-                <p className="text-muted-foreground mt-2 leading-relaxed">
-                  {item.a}
-                </p>
+              <motion.div
+                {...fadeUp}
+                key={item.q}
+                className={`flex items-start gap-4 rounded-2xl p-6 ${item.cls}`}
+              >
+                {item.icon}
+                <div>
+                  <p className="text-lg font-bold">{item.q}</p>
+                  <p className={`mt-1.5 text-[15px] leading-relaxed ${item.sub}`}>
+                    {item.a}
+                  </p>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -283,11 +299,7 @@ export default function Landing() {
 
       {/* ===== Footer ===== */}
       <footer className="border-t">
-        <div className="text-muted-foreground mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-5 py-6 text-xs">
-          <p>
-            † Não exibimos imagens de crianças reais neste site, em respeito à
-            LGPD.
-          </p>
+        <div className="text-muted-foreground mx-auto flex max-w-6xl flex-wrap items-center justify-end gap-3 px-5 py-6 text-xs">
           <p className="flex items-center gap-1.5">
             <MapPin className="h-3.5 w-3.5 text-[var(--flat-coral)]" />
             Vilhena–RO • Educandário Primeiros Passos
