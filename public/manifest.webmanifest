@@ -1,16 +1,16 @@
 {
-  "name": "freebuff.com application",
-  "short_name": "freebuff.com",
-  "description": "freebuff.com application",
+  "name": "Educandário Primeiros Passos",
+  "short_name": "Primeiros Passos",
+  "description": "Creche e maternal em Vilhena–RO para crianças de 6 meses a 3 anos.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#000000",
+  "theme_color": "#1a73b8",
   "icons": [
     {
-      "src": "/logo.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
+      "src": "/logo-educandario.jpg",
+      "sizes": "150x150",
+      "type": "image/jpeg",
       "purpose": "any"
     }
   ]

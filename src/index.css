@@ -51,40 +51,42 @@
   --card-foreground: oklch(0.23 0.02 260);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.23 0.02 260);
-  --primary: oklch(0.68 0.18 15);
+  --primary: oklch(0.59 0.21 29);
   --primary-foreground: oklch(0.995 0.004 95);
-  --secondary: oklch(0.92 0.055 230);
-  --secondary-foreground: oklch(0.28 0.06 255);
+  --secondary: oklch(0.93 0.05 236);
+  --secondary-foreground: oklch(0.4 0.11 249);
   --muted: oklch(0.962 0.008 95);
   --muted-foreground: oklch(0.52 0.03 260);
-  --accent: oklch(0.94 0.145 95);
-  --accent-foreground: oklch(0.3 0.04 95);
+  --accent: oklch(0.94 0.13 90);
+  --accent-foreground: oklch(0.33 0.06 85);
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.925 0.01 95);
   --input: oklch(0.925 0.01 95);
-  --ring: oklch(0.68 0.18 15);
-  --chart-1: oklch(0.68 0.18 15);
-  --chart-2: oklch(0.68 0.14 230);
-  --chart-3: oklch(0.72 0.17 142);
-  --chart-4: oklch(0.83 0.15 85);
-  --chart-5: oklch(0.74 0.16 55);
+  --ring: oklch(0.59 0.21 29);
+  --chart-1: oklch(0.59 0.21 29);
+  --chart-2: oklch(0.53 0.13 249);
+  --chart-3: oklch(0.64 0.17 148);
+  --chart-4: oklch(0.84 0.18 90);
+  --chart-5: oklch(0.66 0.13 236);
   --sidebar: oklch(0.995 0.004 95);
   --sidebar-foreground: oklch(0.23 0.02 260);
-  --sidebar-primary: oklch(0.68 0.18 15);
+  --sidebar-primary: oklch(0.59 0.21 29);
   --sidebar-primary-foreground: oklch(0.995 0.004 95);
   --sidebar-accent: oklch(0.962 0.008 95);
   --sidebar-accent-foreground: oklch(0.23 0.02 260);
   --sidebar-border: oklch(0.925 0.01 95);
-  --sidebar-ring: oklch(0.68 0.18 15);
+  --sidebar-ring: oklch(0.59 0.21 29);
 
-  /* Flat theme tokens — colors from the logo */
-  --flat-coral: oklch(0.68 0.18 15);        /* "primeiros passos" pink */
-  --flat-blue: oklch(0.68 0.14 230);        /* logo sky blue */
-  --flat-blue-deep: oklch(0.52 0.14 248);   /* "EDUCANDÁRIO" navy-blue */
-  --flat-yellow: oklch(0.83 0.15 85);       /* confetti yellow */
-  --flat-green: oklch(0.72 0.17 142);       /* confetti green */
-  --flat-green-hover: oklch(0.66 0.17 142);
-  --flat-orange: oklch(0.74 0.16 55);       /* confetti orange */
+  /* Paleta lida do logotipo do Educandário Primeiros Passos:
+     vermelho #E02B26 · rosa #D1235C · azul #1A73B8
+     azul-céu #2E9BD8 · verde #2AA84A · amarelo #FBC400 */
+  --flat-red: #e02b26;      /* "primeiros passos" e pinceladas vermelhas */
+  --flat-pink: #d1235c;     /* vestido da menina */
+  --flat-blue: #1a73b8;     /* "EDUCANDÁRIO" */
+  --flat-sky: #2e9bd8;      /* pinceladas azul-claro */
+  --flat-green: #2aa84a;    /* pinceladas verdes */
+  --flat-green-hover: #249341;
+  --flat-yellow: #fbc400;   /* pinceladas amarelas */
 }
 
 .dark {

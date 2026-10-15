@@ -1,3 +1,4 @@
+import SiteLogo from "@/components/SiteLogo";
 import { motion } from "framer-motion";
 import {
   Baby,
@@ -50,11 +51,7 @@ export default function Landing() {
       <header className="sticky top-0 z-20 bg-background/95 backdrop-blur-sm">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-4">
           <div className="flex items-center gap-3">
-            <img
-              src="/logo-educandario.jpg"
-              alt="Educandário Primeiros Passos"
-              className="h-11 w-11 shrink-0 rounded-full"
-            />
+            <SiteLogo className="h-12 w-12 shrink-0" />
             <div className="leading-tight">
               <span className="text-lg font-bold tracking-tight">
                 Primeiros Passos
@@ -72,11 +69,7 @@ export default function Landing() {
         {/* ===== Hero ===== */}
         <section className="mx-auto max-w-6xl px-5 pt-14 pb-20 sm:pt-20">
           <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_1fr]">
-            <img
-              src="/logo-educandario.jpg"
-              alt="Educandário Primeiros Passos"
-              className="mx-auto mb-5 h-48 w-48 rounded-full sm:h-64 sm:w-64 lg:h-80 lg:w-80"
-            />
+            <SiteLogo className="mx-auto mb-6 h-56 w-56 sm:h-72 sm:w-72 lg:h-80 lg:w-80" />
             <div>
               <motion.p
                 {...fadeUp}
@@ -90,7 +83,7 @@ export default function Landing() {
                 className="max-w-xl text-4xl font-bold tracking-tight sm:text-5xl sm:leading-[1.1]"
               >
                 O espaço ideal para os{" "}
-                <span className="text-[var(--flat-coral)]">
+                <span className="text-[var(--flat-red)]">
                   primeiros passos
                 </span>{" "}
                 do seu bebê.
@@ -121,7 +114,7 @@ export default function Landing() {
               transition={{ ...fadeUp.transition, delay: 0.1 }}
               className="grid gap-4"
             >
-              <div className="bg-[var(--flat-coral)] text-primary-foreground flex items-start gap-4 rounded-2xl p-6">
+              <div className="text-primary-foreground flex items-start gap-4 rounded-2xl bg-[var(--flat-pink)] p-6">
                 <Baby className="mt-0.5 h-8 w-8 shrink-0" />
                 <div>
                   <p className="text-xl font-bold">06 meses a 03 anos</p>
@@ -152,8 +145,8 @@ export default function Landing() {
           </div>
         </section>
 
-        {/* ===== Atividades (flat coral band) ===== */}
-        <section className="bg-[var(--flat-coral)] text-primary-foreground">
+        {/* ===== Atividades (flat blue band) ===== */}
+        <section className="text-primary-foreground bg-[var(--flat-blue)]">
           <div className="mx-auto max-w-6xl px-5 py-20">
             <motion.h2
               {...fadeUp}
@@ -196,7 +189,7 @@ export default function Landing() {
                   {...fadeUp}
                   className="rounded-2xl bg-white p-6 text-foreground"
                 >
-                  <div className="text-[var(--flat-coral)]">{item.icon}</div>
+                  <div className="text-[var(--flat-red)]">{item.icon}</div>
                   <p className="mt-3 font-bold">{item.title}</p>
                   <p className="text-muted-foreground mt-1.5 text-[15px] leading-relaxed">
                     {item.desc}
@@ -221,14 +214,14 @@ export default function Landing() {
                 icon: <Baby className="mt-0.5 h-8 w-8 shrink-0" />,
                 q: "Quem atende?",
                 a: "Crianças de 6 meses a 3 anos, em turmas organizadas por faixa etária.",
-                cls: "bg-[var(--flat-coral)] text-primary-foreground",
+                cls: "text-primary-foreground bg-[var(--flat-red)]",
                 sub: "text-white/85",
               },
               {
                 icon: <MapPin className="mt-0.5 h-8 w-8 shrink-0" />,
                 q: "Onde estamos?",
                 a: "R. Elvira Crepaldi Mendes, 4953 - Jardim Eldorado, Vilhena - RO, 76987-122.",
-                cls: "bg-[var(--flat-blue)] text-white",
+                cls: "bg-[var(--flat-sky)] text-white",
                 sub: "text-white/85",
               },
               {
@@ -301,7 +294,7 @@ export default function Landing() {
       <footer className="border-t">
         <div className="text-muted-foreground mx-auto flex max-w-6xl flex-wrap items-center justify-end gap-3 px-5 py-6 text-xs">
           <p className="flex items-center gap-1.5">
-            <MapPin className="h-3.5 w-3.5 text-[var(--flat-coral)]" />
+            <MapPin className="h-3.5 w-3.5 text-[var(--flat-red)]" />
             Vilhena–RO • Educandário Primeiros Passos
           </p>
         </div>
