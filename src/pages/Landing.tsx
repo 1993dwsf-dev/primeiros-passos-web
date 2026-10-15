@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import LogoMark from "@/components/LogoMark";
 import {
   Baby,
   BookOpen,
@@ -51,7 +50,11 @@ export default function Landing() {
       <header className="sticky top-0 z-20 bg-background/95 backdrop-blur-sm">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-4">
           <div className="flex items-center gap-3">
-            <LogoMark className="h-11 w-11 shrink-0" />
+            <img
+              src="/logo-educandario.jpg"
+              alt="Educandário Primeiros Passos"
+              className="h-11 w-11 shrink-0 rounded-full"
+            />
             <div className="leading-tight">
               <span className="text-lg font-bold tracking-tight">
                 Primeiros Passos
@@ -69,7 +72,11 @@ export default function Landing() {
         {/* ===== Hero ===== */}
         <section className="mx-auto max-w-6xl px-5 pt-14 pb-20 sm:pt-20">
           <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_1fr]">
-            <LogoMark className="mb-5 h-24 w-24 sm:h-28 sm:w-28" />
+            <img
+              src="/logo-educandario.jpg"
+              alt="Educandário Primeiros Passos"
+              className="mx-auto mb-5 h-28 w-28 rounded-full sm:h-36 sm:w-36"
+            />
             <div>
               <motion.p
                 {...fadeUp}
