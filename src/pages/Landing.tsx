@@ -61,7 +61,7 @@ export default function Landing() {
               alt="Educandário Primeiros Passos"
               width={1254}
               height={1254}
-              className="h-14 w-14 shrink-0"
+              className="mix-blend-lighten h-14 w-14 shrink-0"
             />
             <div className="leading-tight">
               <span className="text-lg font-bold tracking-tight">
@@ -80,13 +80,23 @@ export default function Landing() {
         {/* ===== Hero ===== */}
         <section className="mx-auto max-w-6xl px-5 pt-14 pb-20 sm:pt-20">
           <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_1fr]">
-            <img
-              src="/assets/Logo_Infantil_Educand_rio_Primeiros_Passos.png"
-              alt="Educandário Primeiros Passos"
-              width={1254}
-              height={1254}
-              className="mx-auto mb-6 h-56 w-56 sm:h-72 sm:w-72 lg:h-80 lg:w-80"
-            />
+            <motion.div
+              {...fadeUp}
+              className="mx-auto mb-10 w-fit max-w-full lg:mb-0"
+            >
+              {/* moldura do selo: dá respiro às pinceladas cortadas na borda da
+                  imagem e, com mix-blend-lighten, o fundo levemente off-white do
+                  PNG (#FDFDFE) se funde no branco puro da página */}
+              <div className="rounded-[2rem] border border-[var(--flat-gray)] bg-white p-5 shadow-[0_28px_70px_-45px_rgba(0,53,84,0.6)] sm:p-6 lg:p-7">
+                <img
+                  src="/assets/Logo_Infantil_Educand_rio_Primeiros_Passos.png"
+                  alt="Educandário Primeiros Passos"
+                  width={1254}
+                  height={1254}
+                  className="mix-blend-lighten h-40 w-40 sm:h-52 sm:w-52 lg:h-64 lg:w-64"
+                />
+              </div>
+            </motion.div>
             <div>
               <motion.p
                 {...fadeUp}
