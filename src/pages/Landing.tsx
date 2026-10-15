@@ -51,9 +51,11 @@ export default function Landing() {
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-4">
           <div className="flex items-center gap-3">
             <img
-              src="/logo-educandario.jpg"
+              src="/assets/Logo_Infantil_Educand_rio_Primeiros_Passos.png"
               alt="Educandário Primeiros Passos"
-              className="h-11 w-11 shrink-0 rounded-full"
+              width={1254}
+              height={1254}
+              className="h-14 w-14 shrink-0"
             />
             <div className="leading-tight">
               <span className="text-lg font-bold tracking-tight">
@@ -73,9 +75,11 @@ export default function Landing() {
         <section className="mx-auto max-w-6xl px-5 pt-14 pb-20 sm:pt-20">
           <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_1fr]">
             <img
-              src="/logo-educandario.jpg"
+              src="/assets/Logo_Infantil_Educand_rio_Primeiros_Passos.png"
               alt="Educandário Primeiros Passos"
-              className="mx-auto mb-6 h-44 w-44 rounded-full sm:h-52 sm:w-52 lg:h-60 lg:w-60"
+              width={1254}
+              height={1254}
+              className="mx-auto mb-6 h-56 w-56 sm:h-72 sm:w-72 lg:h-80 lg:w-80"
             />
             <div>
               <motion.p

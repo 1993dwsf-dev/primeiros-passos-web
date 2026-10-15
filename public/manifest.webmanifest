@@ -8,9 +8,9 @@
   "theme_color": "#1a73b8",
   "icons": [
     {
-      "src": "/logo-educandario.jpg",
-      "sizes": "150x150",
-      "type": "image/jpeg",
+      "src": "/logo-favicon.png",
+      "sizes": "128x128",
+      "type": "image/png",
       "purpose": "any"
     }
   ]
